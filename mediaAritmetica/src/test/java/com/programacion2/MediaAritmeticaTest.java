@@ -44,4 +44,23 @@ public class MediaAritmeticaTest {
         assertEquals(0, objeto.mediaAritmeticaR(1, lista), 0.01);
     }
 
+    @Test
+    void mediaAritmeticaTestI() {
+        List<Double> lista = new ArrayList<Double>();
+        lista.add(0.0);
+        assertEquals(0, objeto.mediaAritmeticaIterativa(lista, 1));
+    }
+
+    @Test
+    void mediaAritmeticaTest2() {
+        List<Double> lista = new ArrayList<Double>();
+        lista.add(1.0);
+        lista.add(2.0);
+        lista.add(3.0);
+        assertEquals(2.0, objeto.mediaAritmeticaIterativa(lista, 3), 0.01);
+    }
+
+
+
+
 }

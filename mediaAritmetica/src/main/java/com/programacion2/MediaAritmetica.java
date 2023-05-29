@@ -19,4 +19,12 @@ public class MediaAritmetica {
         }
         return valor;
     }
+    
+    public float mediaAritmeticaIterativa(List<Double> lista2, int tamano){
+        float valor= 0f;
+        for (int i = lista2.size() - 1; i >= 0; i--) {
+            valor += lista2.get(i)/tamano; 
+        }
+        return valor;
+    }
 }
