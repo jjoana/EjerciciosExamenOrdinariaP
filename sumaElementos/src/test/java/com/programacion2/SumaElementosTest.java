@@ -65,10 +65,4 @@ public class SumaElementosTest {
         List<Integer> lista = new ArrayList<Integer>();
         assertEquals(0, objeto.sumaListaIterativo(lista));
     }
-
-
-
-
-
-
 }

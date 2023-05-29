@@ -35,7 +35,7 @@ public class SumaElementos {
             }
             return resultado;
         };
-        return interF.apply(miLista);
+        return interF.apply(miLista);     
 
 
     }
