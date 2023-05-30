@@ -23,7 +23,7 @@ public class MediaAritmeticaTest {
         lista.add(1.0);
         lista.add(2.0);
         lista.add(3.0);
-        assertEquals(1.99, objeto.mediaAritmeticaR(3, lista), 0.01);
+        assertEquals(2, objeto.mediaAritmeticaR(3, lista), 0.01);
     }
 
     @Test
@@ -57,10 +57,26 @@ public class MediaAritmeticaTest {
         lista.add(1.0);
         lista.add(2.0);
         lista.add(3.0);
-        assertEquals(2.0, objeto.mediaAritmeticaIterativa(lista, 3), 0.01);
+        int tamano = lista.size();
+        assertEquals(2.0, objeto.mediaAritmeticaIterativa(lista, tamano), 0.01);
+    }
+    @Test
+    void desviacionTipicaTest2() {
+        List<Double> lista = new ArrayList<Double>();
+        lista.add(1.0);
+        lista.add(2.0);
+        lista.add(3.0);
+        assertEquals(0.81, objeto.desviacionTipicaR(lista), 0.01);
     }
 
-
-
-
+    @Test
+    void desviacionTipicaTestI(){
+        List<Double> lista = new ArrayList<Double>();
+        lista.add(1.0);
+        lista.add(2.0);
+        lista.add(3.0);
+        int tamano = lista.size();
+        float mediaAritmetica = objeto.mediaAritmeticaIterativa(lista, tamano);
+        assertEquals(0.81, objeto.desviacionTipicaI(lista, tamano, mediaAritmetica) , 0.01);
+    }
 }
