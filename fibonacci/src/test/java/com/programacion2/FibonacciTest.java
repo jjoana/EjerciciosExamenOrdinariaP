@@ -66,6 +66,71 @@ public class FibonacciTest {
     }
 
 
+    @Test
+    void potenciaI11(){
+        assertEquals(0, objeto.FibonacciI(0));
+    }
+
+    @Test
+    void potenciaI2(){
+        assertEquals(1, objeto.FibonacciI(1));
+    }
+
+    @Test
+    void potenciaI3(){
+        assertEquals(1, objeto.FibonacciI(2));
+    }
+
+    @Test
+    void potenciaI4(){
+        assertEquals(2, objeto.FibonacciI(3));
+    }
+
+    @Test
+    void potenciaI5(){
+        assertEquals(3, objeto.FibonacciI(4));
+    }
+
+    @Test
+    void potenciaI6(){
+        assertEquals(5, objeto.FibonacciI(5));
+    }
+
+    @Test
+    void potenciaI7(){
+        assertEquals(8, objeto.FibonacciI(6));
+    }
+
+    @Test
+    void potenciaLambda1(){
+        assertEquals(0, objeto.FibonacciI(0));
+    }
+
+    @Test
+    void potenciaLambda2(){
+        assertEquals(1, objeto.FibonacciI(1));
+    }
+
+    @Test
+    void potenciaLambda3(){
+        assertEquals(1, objeto.FibonacciI(2));
+    }
+
+    @Test
+    void potenciaLambda4(){
+        assertEquals(2, objeto.FibonacciI(3));
+    }
+
+    @Test
+    void potenciaLambda5(){
+        assertEquals(3, objeto.FibonacciI(4));
+    }
+
+
+
+
+
+
 
 
 
