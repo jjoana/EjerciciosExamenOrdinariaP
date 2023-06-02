@@ -10,21 +10,27 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 
 public class PersonaTest {
-
     Persona objeto = new Persona();
 
-    @BeforeEach
-    void crearObjeto() {
-        //objeto.fechaDeNacimiento = LocalDate.of(2002,12, 9);
-    }
+    @Test
+    void calcularEdadTest1() throws MiExcepcion{
+        long edad = 20;
+        objeto.setNombre("Jesus"); 
+        objeto.getNombre();
+        objeto.setFechaDeNacimiento(LocalDate.of(2002, 12, 9));
+        objeto.getFechaDeNacimiento();
 
+        assertEquals(edad, objeto.calcularEdad());
+    }
 
     @Test
-    void sumaNumeroRTest(){
-        long edad_esperada = 20;
-        objeto.nombre = "Jesus";
-        objeto.fechaDeNacimiento = LocalDate.of(2002,12, 9);
+    void SumaNumeroLambdaTest3() throws MiExcepcion {
+        objeto.setNombre("Jesus");
+        objeto.setFechaDeNacimiento(LocalDate.of(2052, 12, 9));
 
-        assertEquals(edad_esperada, objeto.calcularEdad());
+        assertThrows(MiExcepcion.class, () -> {
+            objeto.calcularEdad();
+        });
     }
+
 }

@@ -1,16 +1,49 @@
 package com.programacion2;
 
+import java.security.DrbgParameters.Reseed;
 import java.time.LocalDate;
 import java.time.Period;
 
 public class Persona {
-    public String nombre;
-    public LocalDate fechaDeNacimiento;
+    private String nombre;
+    private LocalDate fechaDeNacimiento;
 
-    public long calcularEdad(){
+    public long calcularEdad() throws MiExcepcion{
         LocalDate hoy = LocalDate.now();
         Period resultado = fechaDeNacimiento.until(hoy);
         int edad = resultado.getYears();
-        return edad;
+        if (edad < 0){
+            throw new MiExcepcion(); 
+        } else {
+            return edad;
+        }
     }
+
+    //Metodo getter para nombre
+    public String getNombre(){
+        return nombre;
+    }
+
+    // Metodo getter para fechaDeNAcimiento
+    public LocalDate getFechaDeNacimiento(){
+        return fechaDeNacimiento;
+    }
+
+    // Metodo setter para nombre
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+
+    // Metodo setter para fechaDeNacimiento
+    public void setFechaDeNacimiento(LocalDate fechaDeNacimiento){
+        this.fechaDeNacimiento = fechaDeNacimiento;
+    }
+
+    public long calcularSumaEdades() {
+        return 0;
+    }
+}
+
+class MiExcepcion extends Exception {
+
 }
