@@ -3,7 +3,9 @@ package com.programacion2;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class Persona implements Comparable<Persona> {
+public class Persona implements Comparable <Persona> {
+
+    // Atributos
     private String nombre;
     private LocalDate fechaDeNacimiento;
 
@@ -44,19 +46,11 @@ public class Persona implements Comparable<Persona> {
 
     @Override
     public int compareTo(Persona o) {
-        //return o.fechaDeNacimiento.compareTo(this.fechaDeNacimiento); 
-        
-        long edad;
-        int resultado = 0;
-        try{
-            edad = o.calcularEdad();
-            resultado = Integer.compare((int)edad, (int)this.calcularEdad());
-        }catch(MiExcepcion e){
-            System.out.println("Error");
-        }
-        
-        return resultado;
+     
+        return nombre.compareTo(o.nombre);
+
     }
+
 }
 
 class MiExcepcion extends Exception {

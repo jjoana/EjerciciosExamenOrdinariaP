@@ -1,8 +1,7 @@
 package com.programacion2;
 
-import java.rmi.server.Skeleton;
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 
 public class Personas {
@@ -16,6 +15,7 @@ public class Personas {
     public Persona elMasJoven() {
 
         MiInterf valor = (personas) -> {
+
             Persona objeto = new Persona();
             long edadInicial = 150;
             // Seleccionamos el primer elemento de la lista
@@ -51,6 +51,7 @@ public class Personas {
 
     public long calcularEdadMinima() {
         long edadInicial = 200;
+        Collections.sort(lista);
         for (int i = 0; i < lista.size(); i++) {
             Persona p = lista.get(i);
             try {
@@ -77,6 +78,7 @@ public class Personas {
             return resultado/lista.size();
          }
     }
+    
 @FunctionalInterface
 interface MiInterf {
 

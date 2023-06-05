@@ -28,7 +28,7 @@ public class PersonasTest {
 
         persona = new Persona();
         persona.setNombre("Daniel");
-        persona.setFechaDeNacimiento(LocalDate.of(2003, 2, 10));
+        persona.setFechaDeNacimiento(LocalDate.of(2004, 2, 10));
         personas.lista.add(persona);
 
         persona = new Persona();
@@ -41,7 +41,7 @@ public class PersonasTest {
     void elMasJovenTest1(){
         Persona esperado = new Persona();
         esperado.setNombre("Daniel");
-        esperado.setFechaDeNacimiento(LocalDate.of(2006, 2, 10));
+        esperado.setFechaDeNacimiento(LocalDate.of(2004, 2, 10));
         assertEquals(esperado.getNombre(), personas.elMasJoven().getNombre());
     }
 
