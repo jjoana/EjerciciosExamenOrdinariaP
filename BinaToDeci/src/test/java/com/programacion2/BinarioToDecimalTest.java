@@ -24,4 +24,13 @@ public class BinarioToDecimalTest {
 
         assertEquals(7, objeto.resultado);
     }
+
+    @Test
+    void ConversionRecursivo1() {
+
+        BinarioToDecimal objeto = new BinarioToDecimal();
+        objeto.binarioaDecimalI(1011101);
+
+        assertEquals(93, objeto.resultado);
+    }
 }
