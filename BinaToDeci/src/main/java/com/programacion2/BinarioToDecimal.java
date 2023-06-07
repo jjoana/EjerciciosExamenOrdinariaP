@@ -14,4 +14,13 @@ public class BinarioToDecimal {
             numero /=10;
         }
     }
+
+    public void binarioDecimalR(long numero){
+        if(numero != 0){
+            resto = numero % 10;
+            resultado += resto * (Math.pow(2, exponente++));
+            numero /= 10;
+            binarioDecimalR(numero);
+        }
+    }
 }

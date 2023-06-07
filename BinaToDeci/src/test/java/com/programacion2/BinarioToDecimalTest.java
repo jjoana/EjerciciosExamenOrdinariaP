@@ -17,7 +17,7 @@ public class BinarioToDecimalTest {
     }
 
     @Test
-    void ConversionRecursivo() {
+    void BinoraioTodecimalI() {
 
         BinarioToDecimal objeto = new BinarioToDecimal();
         objeto.binarioaDecimalI(111);
@@ -26,7 +26,7 @@ public class BinarioToDecimalTest {
     }
 
     @Test
-    void ConversionRecursivo1() {
+    void BinoraioTodecimalR() {
 
         BinarioToDecimal objeto = new BinarioToDecimal();
         objeto.binarioaDecimalI(1011101);

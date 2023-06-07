@@ -50,7 +50,7 @@ public class CambioMoneda {
     }
 
     public int cambioLambda(int cambiolambda, List<Integer> sistemaMonedaslambda) {
-        
+
         MiInter interF = (cambio, sistemaMonedas) -> {
             int resultado = 0;
             for (int i = 0; i < sistemaMonedas.size(); i++) {
