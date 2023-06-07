@@ -36,5 +36,18 @@ public class HexaADeciABinaTest {
         objeto.DecimalToBinarioI(18);
         assertEquals(10010, objeto.resultado);
     }
-    
+
+    @Test
+    void DeciToBina2(){
+        HexaADeciABina objeto = new HexaADeciABina();
+        objeto.hexadecimalToBinarioR("1AB3");
+        assertEquals(15265, objeto.resultado);
+    }
+
+    @Test
+    void DeciToBina3(){
+        HexaADeciABina objeto = new HexaADeciABina();
+        objeto.hexadecimalToBinarioR("1AB3");
+        assertEquals(15265, objeto.resultado);
+    }
 }
