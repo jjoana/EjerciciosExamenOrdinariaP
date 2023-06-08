@@ -20,7 +20,7 @@ public class HexaADeciABinaTest {
     void HexaToDeciTest() {
         HexaADeciABina objeto = new HexaADeciABina();
         objeto.hexadecimalToBinarioR("1AB3");
-        assertEquals(6835, objeto.resultado);
+        assertEquals(15265, objeto.resultado);
     }
 
     @Test

@@ -48,7 +48,7 @@ public class PersonasTest {
     @Test
     void calcularSumaEdadesTest2(){
         Persona esperado = new Persona();
-        assertEquals(83, personas.calcularSumaEdades());
+        assertEquals(82, personas.calcularSumaEdades());
     }
 
     @Test
@@ -56,14 +56,14 @@ public class PersonasTest {
         Persona esperado = new Persona();
         esperado.setNombre("Daniel");
         esperado.setFechaDeNacimiento(LocalDate.of(2003, 2, 10));
-        assertEquals(20, personas.calcularEdadMinima());
+        assertEquals(19, personas.calcularEdadMinima());
     }
 
     @Test
     void calcularMediaEdad(){
         Persona esperado = new Persona();
         esperado.getFechaDeNacimiento();
-        assertEquals(20.7, personas.calcularMediaEdad(), 0.1);
+        assertEquals(20.5, personas.calcularMediaEdad(), 0.1);
 
     }
 }

@@ -67,24 +67,23 @@ public class Personas {
 
 
     public double calcularMediaEdad() {
-            double resultado = 0;
-            try{
-                for (Persona p : lista) {
-                    resultado += p.calcularEdad();
-                }
-            } catch (MiExcepcion e) {
-                System.out.println("Ha ocurrido un error");
+        double resultado = 0;
+        try{
+            for (Persona p : lista) {
+                resultado += p.calcularEdad();
             }
-            return resultado/lista.size();
-         }
-    }
+        } catch (MiExcepcion e) {
+            System.out.println("Ha ocurrido un error");
+        }
+        return resultado/lista.size();
+     }
+}
     
 @FunctionalInterface
 interface MiInterf {
 
     Persona apply(Personas personas);
 }
-
 
 @FunctionalInterface
 interface MiInterf2 {

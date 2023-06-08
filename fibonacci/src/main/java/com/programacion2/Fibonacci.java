@@ -10,14 +10,13 @@ public class Fibonacci {
             if (n == 1) {
                 return 1;
             } else {
-                resutado = FibonacciR(n - 1) + FibonacciR(n - 2);
+                resutado = FibonacciR(n - 1 ) + FibonacciR( n - 2 );
             }
         }
         return resutado;
     }
 
     public int FibonacciI(int n) {
-
         int resultado = 0;
 
         if (n == 0) {
@@ -27,7 +26,6 @@ public class Fibonacci {
         } else {
             int antepenultimo = 0;
             int penultimo = 1;
-
             for (int i = 2; i <= n; i++) {
                 resultado = penultimo + antepenultimo;
                 antepenultimo = penultimo;

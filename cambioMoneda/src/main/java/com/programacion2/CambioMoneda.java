@@ -9,31 +9,28 @@ public class CambioMoneda {
 
     public static int cambioIterativo(int cambio, List<Integer> sistemaMonedas) {
         int resultado = 0;
-        for (int i = 0; i < sistemaMonedas.size(); i++) {
-            while (cambio > 0) {
+        for(int i = 0; i<sistemaMonedas.size(); i++){
+            while(cambio > 0){
                 cambio -= sistemaMonedas.get(i);
                 resultado++;
             }
-            if (cambio != 0) {
+            if(cambio !=0){
                 cambio += sistemaMonedas.get(i);
-                resultado--;
-            } else {
-
-            }
+                resultado --;
+            } 
         }
         return resultado;
     }
 
     public static int cambioRecursivo(int cambio, List<Integer> sistemaMonedas) {
-        int[] resultado = new int[1];
+         int[] resultado = new int[1];
 
         cambioRecursivo(cambio, 0, sistemaMonedas, resultado);
         return resultado[0];
-
     }
 
     private static void cambioRecursivo(int cambio, int i, List<Integer> sistemaMonedas, int resultado[]) {
-
+        
         if (cambio <= 0) {
             return;
         } else {
